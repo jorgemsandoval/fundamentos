@@ -1,0 +1,20 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int cantidadcamisa;
+	float preciototal,precondescuento;
+	cout<<"ingrese la cantidad de camisas comprada:";
+	cin>>cantidadcamisa;
+	cout<<"ingrese el precio de todas las camisas:";
+	cin>>preciototal;
+	if(cantidadcamisa>=3)
+		precondescuento=preciototal*0.8;
+	else
+		precondescuento=preciototal*0.9;
+	cout<<"el precio con el descuento es:"<<precondescuento<<endl;
+	getch();
+}
