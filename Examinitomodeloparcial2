@@ -1,0 +1,240 @@
+// horario.cpp : Defines the entry point for the console application.
+//
+ 
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+ 
+using namespace std;
+void main()
+{
+​int h, m, s, h2, m2, s2, H, H2, H3, hf, mf, sf;
+​cout<<"ingrese la hora de su primer horario:";
+​cin>>h;
+​cout<<"ingrese los minutos de su primer horario:";
+​cin>>m;
+​cout<<"ingrese los segundos de su primer horario:";
+​cin>>s;
+ 
+​H=(h*3600)+(m*60)+s;
+ 
+​cout<<"ingrese la hora de su segundo horario:";
+​cin>>h2;
+​cout<<"ingrese los minutos de su segundo horario:";
+​cin>>m2;
+​cout<<"ingrese los segundos de su segundo tiempo:";
+​cin>>s2;
+ 
+​H2=(h2*3600)+(m2*60)+s2;
+​if (H>H2)
+​​H3=(H-H2);
+​else
+​​H3=(H2-H);
+ 
+​hf=(H3/3600);
+​mf=(H3/60)-(hf*60);
+​sf=H3-(hf*3600)-(mf*60);
+ 
+​cout<<hf<<":"<<mf<<","<<sf<<endl;
+ 
+​getch();
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+// CUARTO EJERCICIO.cpp : Defines the entry point for the console application.
+//
+ 
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+ 
+using namespace std;
+ 
+void hola();
+void Menor(int a, int b, int c);
+void absoluto(int x);
+ 
+ 
+int main()
+{
+​int n,x;
+​int a,b,c;
+​do{
+​​cout<<".......Menu........."<<endl;
+​​cout<<"1. Imprimir HOLA"<<endl;
+​​cout<<"2. Sacar el menor de tres valores A,B y C enteros"<<endl;
+​​cout<<"3. Obtener el valor absoluto de un numero real"<<endl;
+​​cout<<"4. PIN"<<endl;
+​cin>>n;
+​switch(n){
+​case 4: break;
+​case 1: hola() ;break;
+​case 2: cout<<"ingrese los valores de A,B y C respectivamente"<<endl;
+​​cin>>a>>b>>c;
+​​Menor(a,b,c);
+​​break;
+​case 3: cout<<"ingrese numero real"<<endl;
+​​cin>>x;
+​​absoluto(x);
+​​break;
+​default: cout<<"opcion incorrecta"<<endl;
+​}
+​}while(n!=4);
+ 
+​return 0;
+}
+ 
+ 
+void hola(){
+​cout<<"HOLA"<<endl;
+}
+ 
+void Menor(int a, int b, int c){
+​bool o=true;
+​cout<<"el menor numero es:";
+​if(a<b){
+​​if(a<c){
+​​​cout<<a<<endl;
+​​​o=false;
+​​}
+​}
+​if(o) cout<<c<<endl;
+ 
+}
+ 
+void absoluto(int x){
+​if(x<0) x=(x*-1);
+​cout<<"el valor es:"<<x<<endl;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+// numero menor c++.cpp : Defines the entry point for the console application.
+//
+ 
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+ 
+using namespace std;
+ 
+int menor_digito(int n);
+ 
+int main()
+{
+​int n;
+​cout<<"ingrese el numero:";
+​cin>>n;
+​if(n<0)
+​​n=n*(-1);
+​n=menor_digito(n);
+​cout<<"el menor digito es:";
+​cout<<n;
+​getch();
+​return 0;
+}
+ 
+int menor_digito(int n)
+{
+​int menor, m;
+​if(n==0)
+​​return 0;
+​n=9;
+​while(n>0){
+​​menor=n%10;
+​​if(menor<m)
+​​​m=menor;
+​​n=n/10;
+ 
+​}
+​    return (n);
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+// SERIE C++: Defines the entry point for the console application.
+//
+ 
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+ 
+using namespace std;
+ 
+float serie(float X, int N);//PROTOTIPO
+ 
+void main(){
+​float S, X, N;
+​cout<<"Ingrese el valor de X:";
+​cin>>X;
+​cout<<"Ingrese el valor de N:";
+​cin>>N;
+​S=serie(X,N);
+​cout<<"El valor de la sumatoria de la serie es:"<<S<<endl;//LLAMADA
+​getch();
+}
+ 
+float serie(float X, int N)//DECLARACION DE LA FUNCION
+{
+int I, i, factorial;
+float S, P; //USAR VARIABLE AUXILIAR DEL MISMO TIPO DE LA SALIDA DE LA FUNCION
+S=(3.1416/5);
+for(I=2;I<=N;I=I+2){
+​factorial=1;
+​for(i=2; i<=I; i++){
+​​factorial=factorial*i;
+​}
+​P=pow(X,I)/factorial;//P es un elemento de la serie
+​P=P*(-1); //Cambiando el signo del elemento alternativamente
+​S=S+P;
+ }
+ return S;
+}
+ 
