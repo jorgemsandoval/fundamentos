@@ -1,0 +1,53 @@
+PREGUNTA1
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{ int a,b,r,x,y;
+cout<<"ingrese el primer numero:"<<endl;
+cin>>a;
+cout<<"ingrese el segundo numero"<<endl;
+cin>>b;
+x=1;
+y=0;
+if(a>b){
+	if(a%b==0){cout<<"es multiplo:"<<x<<endl;}
+	else{cout<<"no es multiplo:"<<y<<endl;}
+}else{cout<<"no se pude determinar si es multiplo"<<endl;}
+getch();
+}
+
+
+PREGUNTA 2
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float dias,dist,p,ptotal;
+	cout<<"ingrese el numero de dias:"<<endl;
+	cin>>dias;
+	cout<<"ingrese la distancia:"<<endl;
+	cin>>dist;
+	cout<<"ingrese el precio por kilometro"<<endl;
+	cin>>p;
+	if(dias>7)
+	{
+		if(dist>500)
+		{
+			ptotal=dist*p*0.25*2;}
+		else{
+			ptotal=dist*p*2;
+				cout<<"ptotal"<<endl;
+		}
+	}else{ptotal=dist*p*2;
+	cout<<ptotal;
+	}
+	getch();
+}
+
