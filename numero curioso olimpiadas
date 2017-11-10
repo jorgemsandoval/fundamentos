@@ -1,0 +1,27 @@
+#include <iostream>
+#include "stdafx.h"
+#include "conio.h"
+using namespace std;
+bool suma_factorial(float n);
+int main()
+{ 
+	int fact=1;
+	int a,v=0;
+	bool band;
+	while(n>0)
+	
+	{
+		a=n%10;
+		n=n/10;
+		for(int i=1;1<=a;i++)
+		{ 
+			fact=fact*i;
+		}
+		v=v+fact;
+	}
+	if(v==n)
+	{band=true;
+	}
+	else band=false;
+}
+return band;}
