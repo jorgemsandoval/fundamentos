@@ -1,0 +1,76 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void cargar(int vec[],int n);
+void mostrar(int vec[],int n);
+void ordenar(int vec[],int n);
+void buscar(int vec[],int n);
+
+int main()
+{
+	int vec[MAX],n,opcion,elemento;
+	do{
+		cout<<"ingrese el numero de elementos:"<<endl;
+		cin>>n;
+	}
+	while((n<0)||(n>MAX));
+	do{
+		cout<<"\t\t menu";
+	    cout<<"elija una opcion";
+		cout<<"1.cargar vector";
+		cout<<"3.ordenar vector";
+		cout<<"4.buscar valor en un vector";
+		cout<<"0.salir";
+		cin>>opcion;
+
+		switch(opcion)
+		{
+		case 1:cargar (vec,n);
+			break;
+
+		case 2:mostrar(vec,n);
+			break;
+		case 3:ordenar(vec,n)
+				   break;
+		case 4:k=buscar(vec,n,elemento);
+
+        void cargar(int vec[],int n)
+		{
+		for(int i=0; i<n; i++)
+		 {
+			 cout<<"ingrese valor vec["<<i<<"]=";
+		 }
+		}
+		void mostrar(int vec[],int n)
+		{
+			for(int i=0;i<n;i++)
+			{
+				cout<<vec[i];
+			}
+		}
+		void ordenar(int vec[],int n)
+		{
+			int aux;
+			for(int i=0; i<n; i++)
+			{ 
+				for(int j=i+1;j<n;j++)
+				{
+					if(vec[j]<vec[i])
+					{
+						aux=vec[i];
+						vec[i]=vec[j];
+						vec[j]=aux;
+					}
+				}
+			}
+		}
+		int buscar(int vec[],int n, int &k)
+		{
+			cout<<"ingrese el elemento"<<endl;
+			cin>>k;
+
+
+
+
